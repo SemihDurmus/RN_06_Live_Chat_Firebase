@@ -1,13 +1,13 @@
 import React from 'react';
 import {TouchableOpacity, Text} from 'react-native';
 
-import {button, button_outline} from './styles';
+import {regular_button, outlined_button} from './styles';
 
 const Button = (props) => {
-  const style = props.noBorder ? button_outline : button;
+  const selectedStyle = props.noBorder ? outlined_button : regular_button;
   return (
-    <TouchableOpacity style={style.container} onPress={props.onPress}>
-      <Text style={style.title}>{props.title}</Text>
+    <TouchableOpacity style={selectedStyle.container} onPress={props.onPress}>
+      <Text style={selectedStyle.title}>{props.title}</Text>
     </TouchableOpacity>
   );
 };

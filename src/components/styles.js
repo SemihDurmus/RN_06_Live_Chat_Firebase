@@ -13,7 +13,7 @@ export const input = StyleSheet.create({
   },
 });
 
-export const button = StyleSheet.create({
+export const regular_button = StyleSheet.create({
   container: {
     backgroundColor: '#D91622',
     margin: 10,
@@ -28,7 +28,7 @@ export const button = StyleSheet.create({
   },
 });
 
-export const button_outline = StyleSheet.create({
+export const outlined_button = StyleSheet.create({
   container: {
     margin: 10,
     padding: 10,
