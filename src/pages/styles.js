@@ -9,12 +9,13 @@ export const authStyle = StyleSheet.create({
   logo: {
     height: Dimensions.get('window').height / 4,
     resizeMode: 'contain',
+    marginBottom: 30,
   },
   logoText: {
-      color: 'purple',
-      fontSize: 35,
-      fontWeight: 'bold'
-  }
+    color: '#D91622',
+    fontSize: 35,
+    fontWeight: 'bold',
+  },
 });
 
 export const timelinePage = StyleSheet.create({

@@ -11,15 +11,39 @@ import {
 
 import auth from '@react-native-firebase/auth';
 import {authStyle} from './styles';
-// import {Input, Button} from '../components';
+import {Input, Button} from '../components';
 // import {resolveAuthError} from '../functions';
 
 const Login = (props) => {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
       <KeyboardAvoidingView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
         <ScrollView contentContainerStyle={{flex: 1}}>
-          <Text style={authStyle.logoText}>ClarusChat</Text>
+          <View style={authStyle.container}>
+            <Image
+              source={require('../assets/main_page_logo.png')}
+              style={authStyle.logo}
+            />
+            <Text style={authStyle.logoText}>We're on Live Chat</Text>
+          </View>
+          <View style={{flex: 1}}>
+            <Input
+              inputProps={{
+                placeholder: 'Email...',
+                placeholderTextColor: '#D91622',
+                keyboardType: 'email-address',
+              }}
+            />
+            <Input
+              inputProps={{
+                placeholder: 'Password...',
+                placeholderTextColor: '#D91622',
+                secureTextEntry: true,
+              }}
+            />
+            <Button title="Login" />
+            <Button title="Sign up" noBorder />
+          </View>
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>

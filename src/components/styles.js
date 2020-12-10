@@ -4,15 +4,18 @@ export const input = StyleSheet.create({
   container: {
     backgroundColor: '#eceff1',
     margin: 10,
-    borderRadius: 5,
-    paddingHorizontal: 10,
+    borderRadius: 20,
+    paddingHorizontal: 16,
   },
-  textInput: {},
+  textInput: {
+    padding: 10,
+    fontSize: 18,
+  },
 });
 
 export const button = StyleSheet.create({
   container: {
-    backgroundColor: 'purple',
+    backgroundColor: '#D91622',
     margin: 10,
     padding: 10,
     alignItems: 'center',
@@ -21,6 +24,7 @@ export const button = StyleSheet.create({
   title: {
     color: 'white',
     fontWeight: 'bold',
+    fontSize: 18,
   },
 });
 
@@ -30,10 +34,13 @@ export const button_outline = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#D91622',
   },
   title: {
-    color: 'purple',
+    color: '#D91622',
     fontWeight: 'bold',
+    fontSize: 18,
   },
 });
 
@@ -44,7 +51,7 @@ export const postitem = StyleSheet.create({
     backgroundColor: '#cfd8dc',
     marginHorizontal: 10,
     borderRadius: 8,
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   },
   headerContainer: {
     padding: 5,
