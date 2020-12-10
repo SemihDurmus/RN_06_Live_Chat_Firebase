@@ -31,18 +31,21 @@ const Sign = (props) => {
             <Input
               inputProps={{
                 placeholder: 'Type your email address',
+                placeholderTextColor: '#e57373',
                 keyboardType: 'email-address',
               }}
             />
             <Input
               inputProps={{
                 placeholder: 'Type your password',
+                placeholderTextColor: '#e57373',
                 secureTextEntry: true,
               }}
             />
             <Input
               inputProps={{
                 placeholder: 'Confirm password',
+                placeholderTextColor: '#e57373',
                 secureTextEntry: true,
               }}
             />

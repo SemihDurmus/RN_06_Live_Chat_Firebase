@@ -15,6 +15,21 @@ import {Input, Button} from '../components';
 // import {resolveAuthError} from '../functions';
 
 const Login = (props) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  function login() {
+    //alert(email + ' ' + password);
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        alert('Confirmed');
+      })
+      .catch(() => {
+        alert('Failed');
+      });
+  }
+
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
       <KeyboardAvoidingView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
@@ -30,18 +45,20 @@ const Login = (props) => {
             <Input
               inputProps={{
                 placeholder: 'Email...',
-                placeholderTextColor: '#D91622',
+                placeholderTextColor: '#e57373',
                 keyboardType: 'email-address',
               }}
+              onType={(value) => setEmail(value)}
             />
             <Input
               inputProps={{
                 placeholder: 'Password...',
-                placeholderTextColor: '#D91622',
+                placeholderTextColor: '#e57373',
                 secureTextEntry: true,
               }}
+              onType={(value) => setPassword(value)}
             />
-            <Button title="Login" />
+            <Button title="Login" onPress={login} />
             <Button
               title="Sign Up"
               noBorder
