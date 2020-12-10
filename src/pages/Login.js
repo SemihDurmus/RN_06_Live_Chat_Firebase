@@ -12,22 +12,28 @@ import {
 import auth from '@react-native-firebase/auth';
 import {authStyle} from './styles';
 import {Input, Button} from '../components';
-// import {resolveAuthError} from '../functions';
+import {resolveAuthError} from '../functions';
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function login() {
-    //alert(email + ' ' + password);
-    auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        alert('Confirmed');
-      })
-      .catch(() => {
-        alert('Failed');
-      });
+  // function login() {
+  //     auth()
+  //       .signInWithEmailAndPassword(email, password)
+  //       .then(() => {
+  //         alert('Confirmed');
+  //       })
+  //       .catch((err) => {
+  //         Alert.alert('Live Chat', resolveAuthError(err.code));
+  //       });
+  //  }
+  async function login() {
+    try {
+      await auth().signInWithEmailAndPassword(email, password);
+    } catch (err) {
+      Alert.alert('Live Chat', resolveAuthError(err.code));
+    }
   }
 
   return (
