@@ -30,7 +30,9 @@ const Login = (props) => {
   //  }
   async function login() {
     try {
-      await auth().signInWithEmailAndPassword(email, password);
+      if (email === '' || password === '') {
+        Alert.alert('Live Chat', resolveAuthError('auth/null-value'));
+      } else await auth().signInWithEmailAndPassword(email, password);
     } catch (err) {
       Alert.alert('Live Chat', resolveAuthError(err.code));
     }
@@ -38,14 +40,16 @@ const Login = (props) => {
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
-      <KeyboardAvoidingView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
+      <KeyboardAvoidingView
+        style={{flex: 1, backgroundColor: '#cfd8dc'}}
+        behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
         <ScrollView contentContainerStyle={{flex: 1}}>
           <View style={authStyle.container}>
             <Image
               source={require('../assets/main_page_logo.png')}
               style={authStyle.logo}
             />
-            <Text style={authStyle.logoText}>We're on Live Chat</Text>
+            <Text style={authStyle.logoText}>Welcome to Live Chat</Text>
           </View>
           <View style={{flex: 1}}>
             <Input

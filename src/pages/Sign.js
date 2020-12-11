@@ -14,6 +14,28 @@ import {authStyle} from './styles';
 import {Input, Button} from '../components';
 
 const Sign = (props) => {
+  //TODO: try to minimize the nr of states
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordRepeat, setPasswordRepeat] = useState('');
+
+  async function signIn() {
+    //TODO: a better email validation
+    //alert(email + password + passwordRepeat);
+    if (password == passwordRepeat) {
+      try {
+        await auth().createUserWithEmailAndPassword(email, password);
+        Alert.alert('Live Chat', '👍 Account created');
+        props.navigation.goBack();
+      } catch (err) {
+        console.log(err);
+        Alert.alert('Live Chat', '😯 A problem has occured');
+      }
+    } else {
+      Alert.alert('Live Chat', '😯 Passwords do not match');
+    }
+  }
+
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
       <KeyboardAvoidingView
@@ -34,6 +56,7 @@ const Sign = (props) => {
                 placeholderTextColor: '#e57373',
                 keyboardType: 'email-address',
               }}
+              onType={(val) => setEmail(val)}
             />
             <Input
               inputProps={{
@@ -41,6 +64,7 @@ const Sign = (props) => {
                 placeholderTextColor: '#e57373',
                 secureTextEntry: true,
               }}
+              onType={(val) => setPassword(val)}
             />
             <Input
               inputProps={{
@@ -48,8 +72,9 @@ const Sign = (props) => {
                 placeholderTextColor: '#e57373',
                 secureTextEntry: true,
               }}
+              onType={(val) => setPasswordRepeat(val)}
             />
-            <Button title="Create account" />
+            <Button title="Create account" onPress={signIn} />
             <Button
               title="Cancel"
               noBorder

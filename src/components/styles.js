@@ -19,7 +19,12 @@ export const regular_button = StyleSheet.create({
     margin: 10,
     padding: 10,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 24,
+    width: Dimensions.get('window').width * 0.4,
+    alignSelf: 'center',
+    shadowColor: '#7f8c8d',
+    shadowOffset: {width: 0, height: 3},
+    shadowOpacity: 1,
   },
   title: {
     color: 'white',
@@ -30,15 +35,21 @@ export const regular_button = StyleSheet.create({
 
 export const outlined_button = StyleSheet.create({
   container: {
+    backgroundColor: '#ff6b6b',
     margin: 10,
     padding: 10,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 24,
     borderWidth: 1,
-    borderColor: '#D91622',
+    borderColor: '#ff6b6b',
+    width: Dimensions.get('window').width * 0.4,
+    alignSelf: 'center',
+    shadowColor: '#7f8c8d',
+    shadowOffset: {width: 0, height: 3},
+    shadowOpacity: 1,
   },
   title: {
-    color: '#D91622',
+    color: '#FFF',
     fontWeight: 'bold',
     fontSize: 18,
   },
