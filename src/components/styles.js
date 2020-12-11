@@ -1,3 +1,5 @@
+//-------------LOGIN/SIGN UP----------------
+
 import {StyleSheet, Dimensions} from 'react-native';
 
 export const input = StyleSheet.create({
@@ -55,6 +57,25 @@ export const outlined_button = StyleSheet.create({
   },
 });
 
+//-------------TIMELINE----------------
+export const header = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    padding: 5,
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderColor: '#90a4ae',
+  },
+  textContainer: {
+    flex: 1,
+  },
+  text: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: '#78909c',
+  },
+});
+
 export const postitem = StyleSheet.create({
   container: {
     flex: 1,
@@ -98,34 +119,18 @@ export const post_input = StyleSheet.create({
     bottom: 10,
     position: 'absolute',
     backgroundColor: '#e0e0e0',
-    borderRadius: 5,
-    padding: 5,
+    borderRadius: 20,
+    paddingHorizontal: 14,
+    paddingBottom: 6,
+    paddingTop: 10,
     flexDirection: 'row',
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#b0bec5',
   },
   inputContainer: {
     flex: 1,
   },
   button: {},
-});
-
-export const header = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    padding: 5,
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderColor: '#90a4ae',
-  },
-  textContainer: {
-    flex: 1,
-  },
-  text: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#78909c',
-  },
 });
 
 export const topicModal = StyleSheet.create({

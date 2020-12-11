@@ -14,13 +14,18 @@ const Header = (props) => {
         <Icon
           name="hexagon-multiple"
           size={30}
-          color="#69007f"
+          color="#6ab04c"
           onPress={props.onTopicModalSelect}
           style={{
-            marginRight: 10,
+            marginRight: 18,
           }}
         />
-        <Icon name="login" size={30} color="#69007f" />
+        <Icon
+          name="login"
+          size={30}
+          color="#D91622"
+          style={{marginRight: 18}}
+        />
       </View>
     </View>
   );

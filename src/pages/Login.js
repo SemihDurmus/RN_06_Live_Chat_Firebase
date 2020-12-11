@@ -32,7 +32,10 @@ const Login = (props) => {
     try {
       if (email === '' || password === '') {
         Alert.alert('Live Chat', resolveAuthError('auth/null-value'));
-      } else await auth().signInWithEmailAndPassword(email, password);
+      } else {
+        await auth().signInWithEmailAndPassword(email, password);
+        props.navigation.navigate('Timeline');
+      }
     } catch (err) {
       Alert.alert('Live Chat', resolveAuthError(err.code));
     }

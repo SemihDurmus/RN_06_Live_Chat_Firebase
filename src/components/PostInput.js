@@ -14,7 +14,7 @@ const PostInput = (props) => {
         <TextInput
           ref={inputRef}
           multiline
-          placeholder="Type something.."
+          placeholder="Type a message"
           onChangeText={(value) => setPostText(value)}
         />
       </View>
@@ -24,7 +24,7 @@ const PostInput = (props) => {
           props.onSendPost(postText);
           inputRef.current.clear();
         }}>
-        <Icon name="telegram" size={30} color="#69007f" />
+        <Icon name="telegram" size={34} color="#6ab04c" />
       </TouchableOpacity>
     </View>
   );
