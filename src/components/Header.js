@@ -8,12 +8,12 @@ const Header = (props) => {
   return (
     <View style={header.container}>
       <View style={header.textContainer}>
-        <Text style={header.text}>#{props.title}</Text>
+        <Text style={header.text}> # {props.title}</Text>
       </View>
       <View style={{justifyContent: 'center', flexDirection: 'row'}}>
         <Icon
-          name="hexagon-multiple"
-          size={30}
+          name="message-bulleted"
+          size={34}
           color="#6ab04c"
           onPress={props.onTopicModalSelect}
           style={{
@@ -21,7 +21,7 @@ const Header = (props) => {
           }}
         />
         <Icon
-          name="login"
+          name="logout"
           size={30}
           color="#D91622"
           style={{marginRight: 18}}

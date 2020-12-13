@@ -24,7 +24,7 @@ const PostInput = (props) => {
           props.onSendPost(postText);
           inputRef.current.clear();
         }}>
-        <Icon name="telegram" size={34} color="#6ab04c" />
+        <Icon name="send" size={30} color="#6ab04c" />
       </TouchableOpacity>
     </View>
   );

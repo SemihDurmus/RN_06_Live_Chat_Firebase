@@ -11,18 +11,21 @@ import {
 
 import {timelinePage} from './styles';
 //import {PostItem, PostInput, Header, TopicSelectModal} from '../components';
-import {Header, PostInput} from '../components';
+import {Header, PostInput, TopicSelectModal} from '../components';
 
 const Timeline = () => {
-  const user = auth().currentUser;
-  console.log(user);
+  const [topicModalFlag, setTopicModalFlag] = useState(true);
+  const [selectedTopic, setSelectedTopic] = useState(null);
   return (
     <SafeAreaView style={timelinePage.container}>
       <KeyboardAvoidingView
         style={timelinePage.container}
         behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
         <View style={timelinePage.container}>
-          <Header />
+          <Header
+            onTopicModalSelect={() => setTopicModalFlag(true)}
+            title={selectedTopic}
+          />
           <FlatList
             data={[]}
             renderItem={() => {
@@ -30,6 +33,17 @@ const Timeline = () => {
             }}
           />
           <PostInput onSendPost={(val) => console.log(val)} />
+
+          <TopicSelectModal
+            visibility={topicModalFlag}
+            onClose={() =>
+              selectedTopic !== null ? setTopicModalFlag(false) : null
+            }
+            onTopicSelect={(val) => {
+              setSelectedTopic(val);
+              setTopicModalFlag(false);
+            }}
+          />
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
