@@ -13,6 +13,7 @@ const TopicSelectModal = (props) => {
       style={topicModal.modal}
       onBackdropPress={props.onClose}>
       <View style={topicModal.container}>
+        <Text style={topicModal.title}>Select a channel</Text>
         {topics.map((topic, i) => {
           return (
             <TouchableOpacity

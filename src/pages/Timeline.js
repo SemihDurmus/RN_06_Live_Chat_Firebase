@@ -11,23 +11,39 @@ import {
 } from 'react-native';
 
 import {timelinePage} from './styles';
-//import {PostItem, PostInput, Header, TopicSelectModal} from '../components';
-import {Header, PostInput, TopicSelectModal} from '../components';
+import {Header, PostInput, PostItem, TopicSelectModal} from '../components';
 
 const user = auth().currentUser ? auth().currentUser : 'Default';
 
 const Timeline = () => {
   const [topicModalFlag, setTopicModalFlag] = useState(true);
   const [selectedTopic, setSelectedTopic] = useState(null);
+  const [postList, setPostList] = useState([]);
 
-  const selectingTopic = (val) => {
-    setSelectedTopic(val);
+  const selectingTopic = (value) => {
+    setSelectedTopic(value);
     setTopicModalFlag(false);
 
     database()
-      .ref()
+      .ref(value)
       .on('value', (snapshot) => {
-        console.log('Data: ', snapshot.val());
+        const data = snapshot.val();
+        const formattedData =
+          data == null
+            ? []
+            : Object.keys(data).map((key) => ({
+                ...data[key],
+                // userMail: data[key].userMail,
+                // postText: data[key].postText,
+                // time: data[key].time,
+              }));
+        //console.log('formattedData', formattedData);
+
+        formattedData.sort((b, a) => {
+          return new Date(b.time) - new Date(a.time);
+        });
+
+        setPostList(formattedData);
       });
   };
 
@@ -38,8 +54,10 @@ const Timeline = () => {
       time: moment().toISOString(),
     };
 
-    database().ref(`${selectedTopic}/`).push(postObject);
+    database().ref(selectedTopic).push(postObject);
   };
+
+  const renderPosts = ({item}) => <PostItem post={item} />;
 
   return (
     <SafeAreaView style={timelinePage.container}>
@@ -49,14 +67,16 @@ const Timeline = () => {
         <View style={timelinePage.container}>
           <Header
             onTopicModalSelect={() => setTopicModalFlag(true)}
+            onLogOut={() => auth().signOut()}
             title={selectedTopic}
           />
+
           <FlatList
-            data={[]}
-            renderItem={() => {
-              null;
-            }}
+            keyExtractor={(_, i) => i.toString()}
+            data={postList}
+            renderItem={renderPosts}
           />
+
           <PostInput onSendPost={sendingPost} />
 
           <TopicSelectModal

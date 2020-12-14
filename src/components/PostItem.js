@@ -1,4 +1,4 @@
-// import moment from 'moment';
+import moment from 'moment';
 import React from 'react';
 import {Text, View} from 'react-native';
 

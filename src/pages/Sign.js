@@ -54,7 +54,8 @@ const Sign = (props) => {
               inputProps={{
                 placeholder: 'Type your email address',
                 placeholderTextColor: '#e57373',
-                keyboardType: 'email-address',
+                //keyboardType: 'email-address',
+                // 👆 This is to avoid Strong password autofill in iOS simulator
               }}
               onType={(val) => setEmail(val)}
             />

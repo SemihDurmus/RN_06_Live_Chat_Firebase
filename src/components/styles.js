@@ -140,6 +140,13 @@ export const topicModal = StyleSheet.create({
     padding: 0,
     paddingHorizontal: 10,
   },
+  title: {
+    color: '#9a0007',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginVertical: 10,
+  },
   container: {
     paddingTop: 5,
     backgroundColor: 'white',
