@@ -25,9 +25,11 @@
 
 ## Overview
 
-<img src="visuals/login.gif" height="500"> 
-<img src="visuals/signup.gif" height="500">
-<img src="visuals/chat.gif" height="500">
+| Login | Sign up     | Chat  |
+  |--------------|:--------:|:--------------------------------------------------------------:|
+  |<img src="visuals/login.gif" height="500">     |<img src="visuals/signup.gif" height="500">| <img src="visuals/chat.gif" height="500">|
+
+
 
 ### Built With
 
