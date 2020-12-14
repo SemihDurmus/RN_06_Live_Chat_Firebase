@@ -21,11 +21,12 @@ const Timeline = () => {
   const [postList, setPostList] = useState([]);
 
   const selectingTopic = (value) => {
+    database().ref(`/${selectedTopic}`).off('value');
     setSelectedTopic(value);
     setTopicModalFlag(false);
 
     database()
-      .ref(value)
+      .ref(`${value}`)
       .on('value', (snapshot) => {
         const data = snapshot.val();
         const formattedData =
