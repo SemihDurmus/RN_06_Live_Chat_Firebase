@@ -43,16 +43,14 @@ const Sign = (props) => {
   }
 
   async function signIn() {
-    //TODO: a better email validation
-    //alert(email + password + passwordRepeat);
-    if (password.password_first === passwor.password_second) {
+    if (password.password_first === password.password_second) {
       try {
         await auth().createUserWithEmailAndPassword(
           email,
           password.password_first,
         );
         Alert.alert('Live Chat', '👍 Account created');
-        props.navigation.goBack();
+        props.navigation.navigate('Login');
       } catch (err) {
         Alert.alert('Live Chat', '😯 A problem has occured');
       }

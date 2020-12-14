@@ -59,8 +59,7 @@ const Login = (props) => {
               inputProps={{
                 placeholder: 'Email...',
                 placeholderTextColor: '#e57373',
-                //keyboardType: 'email-address',
-                // 👆 This is to avoid Strong password autofill in iOS simulator
+                keyboardType: 'email-address',
               }}
               onType={(value) => setEmail(value)}
             />

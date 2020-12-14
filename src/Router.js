@@ -22,6 +22,7 @@ function Router() {
         {hasSession ? (
           <>
             <Stack.Screen name="Timeline" component={Timeline} />
+            <Stack.Screen name="Login" component={Login} />
           </>
         ) : (
           <>
