@@ -137,7 +137,14 @@ $yarn add moment
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-- [Source of APIs](https://opentable.herokuapp.com/)
+- [Firebase(Authentication and Realtime Database)](https://firebase.google.com/?gclid=Cj0KCQjwufn8BRCwARIsAKzP694R8t8HoyK48GMN2tTTtGwJkIH5LIA1pMusLsuDBALEV9gZm_eyEgIaAgB0EALw_wcB))
+- [Firebase usage](https://rnfirebase.io/)
+- [Navigation](https://reactnavigation.org/docs/getting-started)
+- [Modal](https://github.com/react-native-modal/react-native-modal)
+- [Vector Icons - Usage](https://github.com/oblador/react-native-vector-icons)
+- [Vector Icons - List](https://oblador.github.io/react-native-vector-icons/)
+- [Modals](https://github.com/react-native-modal/react-native-modal)
+- [Moment-js](https://momentjs.com/)
 
 ## Contact
 
