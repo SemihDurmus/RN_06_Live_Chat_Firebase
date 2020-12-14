@@ -5,7 +5,7 @@ import {input} from './styles';
 
 const Input = (props) => {
   return (
-    <View style={input.container}>
+    <View style={[input.container, props.redBorder]}>
       <TextInput
         ref={props.reference}
         style={input.textInput}

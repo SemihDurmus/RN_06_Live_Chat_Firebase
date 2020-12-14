@@ -15,6 +15,7 @@ const PostInput = (props) => {
           ref={inputRef}
           multiline
           placeholder="Type a message"
+          placeholderTextColor="#3c6382"
           onChangeText={(value) => setPostText(value)}
         />
       </View>

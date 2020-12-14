@@ -14,7 +14,7 @@ const Header = (props) => {
         <Icon
           name="message-bulleted"
           size={34}
-          color="#6ab04c"
+          color="#40739e"
           onPress={props.onTopicModalSelect}
           style={{
             marginRight: 18,
@@ -23,7 +23,7 @@ const Header = (props) => {
         <Icon
           name="logout"
           size={30}
-          color="#D91622"
+          color="#833471"
           onPress={props.onLogOut}
           style={{marginRight: 18}}
         />

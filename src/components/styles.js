@@ -70,7 +70,7 @@ export const header = StyleSheet.create({
     flex: 1,
   },
   text: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#78909c',
   },
@@ -78,37 +78,46 @@ export const header = StyleSheet.create({
 
 export const postitem = StyleSheet.create({
   container: {
-    flex: 1,
     marginVertical: 10,
     backgroundColor: '#cfd8dc',
+
     marginHorizontal: 10,
-    borderRadius: 8,
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    width: 'auto',
   },
   headerContainer: {
     padding: 5,
-    backgroundColor: '#9c27b0',
+    backgroundColor: '#dcdde1',
+    backgroundColor: '#f5f6fa',
     justifyContent: 'space-between',
     flexDirection: 'row',
     borderTopRightRadius: 8,
     borderTopLeftRadius: 8,
-    borderBottomRightRadius: 8,
+    borderBottomLeftRadius: 8,
+    marginTop: 2,
   },
   username: {
     fontWeight: 'bold',
-    color: 'white',
+    color: '#3c6382',
     marginRight: 10,
   },
-  bodyContainer: {
-    flex: 1,
-    padding: 5,
-    backgroundColor: 'white',
-    borderBottomRightRadius: 8,
-    borderBottomLeftRadius: 8,
-  },
   time: {
-    color: 'white',
+    color: '#3c6382',
     fontStyle: 'italic',
+    fontSize: 11,
+  },
+  bodyContainer: {
+    padding: 5,
+    paddingLeft: 20,
+    paddingRight: 10,
+    backgroundColor: '#b8e994',
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+  },
+  postText: {
+    fontSize: 18,
   },
 });
 
@@ -130,7 +139,6 @@ export const post_input = StyleSheet.create({
   inputContainer: {
     flex: 1,
   },
-  button: {},
 });
 
 export const topicModal = StyleSheet.create({
