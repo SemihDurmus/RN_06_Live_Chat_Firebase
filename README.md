@@ -25,14 +25,16 @@
 
 ## Overview
 
-<img src="src/assets/rest1.gif" height="500">
+<img src="visuals/login.gif" height="500"> 
+<img src="visuals/signup.gif" height="500">
+<img src="visuals/chat.gif" height="500">
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React-native](https://reactnative.dev/)
-- [Firebase (Authentication and REaltime Database)](https://firebase.google.com/?gclid=Cj0KCQjwufn8BRCwARIsAKzP694R8t8HoyK48GMN2tTTtGwJkIH5LIA1pMusLsuDBALEV9gZm_eyEgIaAgB0EALw_wcB)
+- [Firebase (Authentication and Realtime Database)](https://firebase.google.com/?gclid=Cj0KCQjwufn8BRCwARIsAKzP694R8t8HoyK48GMN2tTTtGwJkIH5LIA1pMusLsuDBALEV9gZm_eyEgIaAgB0EALw_wcB)
 
 
 ## Features
@@ -62,15 +64,72 @@
 To use this application, the packages for Navigation, Moment, Modal, Vector Icons and Firebase should be installed/identified with prior to running the app. From your command line:
 
 ```
-npm install @react-navigation/native
+//------FIREBASE---------------
 
-For IOS:
-npx pod-install ios
+//https://rnfirebase.io/auth/usage
 
-npm install @react-navigation/stack
+//Install & setup the app module
+
+$yarn add @react-native-firebase/app
+
+//Install the authentication module
+
+$yarn add @react-native-firebase/auth
+
+//If you're developing your app using iOS, run this command
+
+$cd ios/ && pod install && cd ..
+
+//Install & setup the app module
+
+$yarn add @react-native-firebase/app
+
+//Install the database module
+
+$yarn add @react-native-firebase/database
+
+//If you're developing your app using iOS, run this command
+
+$cd ios/ && pod install && cd ..
+
+//-----REACT NAVIGATION---------
+
+//https://reactnavigation.org/docs/getting-started
+
+$yarn add @react-navigation/native
+
+$yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+$npx pod-install ios
+
+//Add the following line to the top of the index.js file
+
+@import 'react-native-gesture-handler';
+
+$yarn add @react-navigation/stack
+
+//-----MODAL-------------------
+
+//https://github.com/react-native-modal/react-native-modal
+
+$yarn add react-native-modal
 
 
-npm install axios
+//-----VECTOR ICONS-------------
+
+//https://github.com/oblador/react-native-vector-icons
+
+$ npm install --save react-native-vector-icons
+
+//Detailed directions are stated in the package document. In this project only "MaterialCommunityIcons" was uploaded and used among other alternatives.
+
+//https://oblador.github.io/react-native-vector-icons/
+
+//-----MOMENT------------------
+
+//https://momentjs.com/
+
+$yarn add moment 
 
 ```
 
