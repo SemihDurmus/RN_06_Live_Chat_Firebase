@@ -26,8 +26,15 @@
 ## Overview
 
 | Login | Sign up     | Chat  |
-  |--------------|:--------:|:--------------------------------------------------------------:|
-  |<img src="visuals/login.gif" height="500">     |<img src="visuals/signup.gif" height="500">| <img src="visuals/chat.gif" height="500">|
+|--------------|:--------:|:--------------------------------------------------------------:|
+|<img src="visuals/login.gif" height="500"> |<img src="visuals/signup.gif" height="500">| <img src="visuals/chat.gif" height="500">|
+  
+  <br/>
+  
+  ### Sample firebase usage 
+  |  Users | Realtime Database | 
+  |--------------|:--------:|
+  |<img src="visuals/firebase_users.png" width="500"> | <img src="visuals/firebase_realtime_db.png" width="500"> |
 
 
 
