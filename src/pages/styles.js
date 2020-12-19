@@ -12,7 +12,7 @@ export const authStyle = StyleSheet.create({
     marginBottom: 30,
   },
   logoText: {
-    color: '#c23616',
+    color: '#D91622',
     fontSize: 30,
     fontWeight: 'bold',
   },
